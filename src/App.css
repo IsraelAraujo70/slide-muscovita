@@ -1,38 +1,399 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section styles */
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Section backgrounds */
+.section-intro {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section-history {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section-properties {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.section-occurrence {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #333;
+}
+
+.section-reserves {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+}
+
+.section-extraction {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  color: #333;
+}
+
+.section-applications {
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  color: white;
+}
+
+.section-market {
+  background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%);
+  color: #333;
+}
+
+.section-sustainability {
+  background: linear-gradient(135deg, #96e6a1 0%, #d4fc79 100%);
+  color: #333;
+}
+
+.section-future {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+}
+
+/* Typography */
+.main-title {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.seminar-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.seminar-info p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.professor {
+  font-weight: 600;
+  font-size: 1.4rem !important;
+}
+
+.authors {
+  text-align: center;
+  opacity: 0.9;
+}
+
+.authors p {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Content boxes */
+.content-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 1rem;
+  max-width: 500px;
+}
+
+.content-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.content-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-box li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.content-box li:last-child {
+  border-bottom: none;
+}
+
+/* Grids */
+.properties-grid,
+.occurrence-grid,
+.applications-grid,
+.sustainability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.property-card,
+.occurrence-card,
+.app-card,
+.sust-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover,
+.occurrence-card:hover,
+.app-card:hover,
+.sust-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card h3,
+.occurrence-card h3,
+.app-card h3,
+.sust-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.property-card ul,
+.occurrence-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.property-card li,
+.occurrence-card li {
+  padding: 0.5rem 0;
+  opacity: 0.9;
+}
+
+/* World map section */
+.world-map {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.country-highlight,
+.major-deposits {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.country-highlight h3,
+.major-deposits h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.countries-grid span {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Process flow */
+.process-flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  flex: 1;
+  margin: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.process-step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.process-step p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Market section */
+.market-content,
+.market-trends {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 1rem;
+}
+
+.market-content h3,
+.market-trends h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.market-content ul,
+.market-trends ul {
+  list-style: none;
+  padding: 0;
+}
+
+.market-content li,
+.market-trends li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+}
+
+/* Future section */
+.future-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+}
+
+.future-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.future-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.future-content li {
+  padding: 0.8rem 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.conclusion {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Navigation dots */
+#fp-nav ul li a span {
+  background: white !important;
+}
+
+#fp-nav ul li a.active span {
+  background: #4CAF50 !important;
+}
+
+.fp-tooltip {
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .properties-grid,
+  .occurrence-grid,
+  .applications-grid,
+  .sustainability-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .process-flow {
+    flex-direction: column;
+  }
+  
+  .world-map {
+    flex-direction: column;
+  }
+  
+  .country-highlight,
+  .major-deposits {
+    margin-bottom: 1rem;
   }
 }
