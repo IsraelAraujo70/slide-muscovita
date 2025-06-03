@@ -83,24 +83,24 @@ body {
 
 /* Typography */
 .main-title {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 900;
   letter-spacing: -2px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 3rem;
   text-align: center;
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -112,13 +112,13 @@ body {
 }
 
 .seminar-info p {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .professor {
   font-weight: 600;
-  font-size: 1.4rem !important;
+  font-size: 2rem !important;
 }
 
 .authors {
@@ -127,23 +127,23 @@ body {
 }
 
 .authors p {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Content boxes */
 .content-box {
   background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 3rem;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  margin: 1rem;
-  max-width: 500px;
+  margin: 1.5rem;
+  max-width: 700px;
 }
 
 .content-box h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
   color: #333;
 }
 
@@ -153,12 +153,19 @@ body {
 }
 
 .content-box li {
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 1.4rem;
 }
 
 .content-box li:last-child {
   border-bottom: none;
+}
+
+.content-box p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #333;
 }
 
 /* Grids */
@@ -167,10 +174,10 @@ body {
 .applications-grid,
 .sustainability-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .property-card,
@@ -179,10 +186,11 @@ body {
 .sust-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 3rem;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
+  min-height: 350px;
 }
 
 .property-card:hover,
@@ -196,8 +204,8 @@ body {
 .occurrence-card h3,
 .app-card h3,
 .sust-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
 }
 
@@ -209,8 +217,15 @@ body {
 
 .property-card li,
 .occurrence-card li {
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
   opacity: 0.9;
+  font-size: 1.4rem;
+}
+
+.app-card p,
+.sust-card p {
+  font-size: 1.6rem;
+  line-height: 1.8;
 }
 
 /* World map section */
@@ -225,16 +240,21 @@ body {
 .country-highlight,
 .major-deposits {
   background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 3rem;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .country-highlight h3,
 .major-deposits h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   color: #333;
+}
+
+.country-highlight li {
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
 }
 
 .countries-grid {
@@ -245,10 +265,11 @@ body {
 
 .countries-grid span {
   background: #f0f0f0;
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 1.5rem;
+  border-radius: 12px;
   text-align: center;
   font-weight: 600;
+  font-size: 1.4rem;
 }
 
 /* Process flow */
@@ -263,40 +284,41 @@ body {
 
 .process-step {
   background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 3rem;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   flex: 1;
-  margin: 1rem;
+  margin: 1.5rem;
   text-align: center;
   position: relative;
+  min-height: 250px;
 }
 
 .process-step h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
   color: #333;
 }
 
 .process-step p {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 /* Market section */
 .market-content,
 .market-trends {
   background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 3rem;
+  border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  margin: 1rem;
+  margin: 1.5rem;
 }
 
 .market-content h3,
 .market-trends h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   color: #333;
 }
 
@@ -308,24 +330,24 @@ body {
 
 .market-content li,
 .market-trends li {
-  padding: 0.8rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid rgba(0,0,0,0.1);
-  font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 /* Future section */
 .future-content {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 3rem;
-  border-radius: 15px;
+  padding: 4rem;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 2rem;
 }
 
 .future-content h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
 }
 
 .future-content ul {
@@ -334,16 +356,16 @@ body {
 }
 
 .future-content li {
-  padding: 0.8rem 0;
-  font-size: 1.2rem;
+  padding: 1rem 0;
+  font-size: 1.8rem;
   opacity: 0.9;
 }
 
 .conclusion {
   text-align: center;
-  font-size: 1.3rem;
-  line-height: 1.8;
-  max-width: 800px;
+  font-size: 1.8rem;
+  line-height: 2;
+  max-width: 900px;
   margin: 0 auto;
 }
 
